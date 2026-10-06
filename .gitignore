@@ -1,9 +1,11 @@
-  *.o
-  *.out
-  hello
-  prog
-  fh
-  tracer
-  vbuf
-  buffer
-  student
+*.o
+*.out
+hello
+prog
+fh
+tracer
+vbuf
+buffer
+student
+main
+shared_test

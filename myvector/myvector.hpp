@@ -1,11 +1,7 @@
-#include <iostream>
+#pragma once
 #include <utility>          // std::move 在这（保险起见加上）
-#include <algorithm>
-#include <vector>
-#include <chrono>
 
 
-using namespace std;
 
 template<typename T>
 class MyVector {
@@ -66,10 +62,7 @@ public:
     const T* begin() const {return data_;}
     const T* end() const {return data_+size_;}
     
-    void print(const MyVector<int>& v) {     // ← 注意 const &
-        for (int x : v) cout << x << " ";
-        cout << "\n";
-    }
+    
     void pop_back(){ 
         size_--;
     }        // 删掉最后一个元素
@@ -99,17 +92,3 @@ private:
 };
 
 
-int main() {
-    MyVector<int> v;
-    for (int i = 1; i <= 5; ++i) v.push_back(i * 10);
-
-    cout << "size=" << v.size() << " front=" << v.front() << " back=" << v.back() << "\n";
-
-    v.pop_back();
-    cout << "pop 之后: size=" << v.size() << " back=" << v.back() << "\n";
-
-    v.clear();
-    cout << "clear 之后: size=" << v.size()
-         << " capacity=" << v.capacity() << " empty=" << v.empty() << "\n";
-    return 0;
-}
