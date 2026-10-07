@@ -9,3 +9,6 @@ buffer
 student
 main
 shared_test
+chain
+addr_test
+pool_test
