@@ -12,3 +12,5 @@ shared_test
 chain
 addr_test
 pool_test
+placement
+pool_use
