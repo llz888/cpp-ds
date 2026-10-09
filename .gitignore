@@ -17,3 +17,5 @@ pool_use
 race
 race_atomic
 race_shared
+wait_busy
+wait_cv
