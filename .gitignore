@@ -19,3 +19,4 @@ race_atomic
 race_shared
 wait_busy
 wait_cv
+queue_test
