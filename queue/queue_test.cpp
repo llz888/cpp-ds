@@ -36,7 +36,7 @@ void test_no_loss() {
     while (q.pop(v)) sum += v;
     p.join();
 
-    CHECK(sum == 500500);      // ← 从 1 改回来          // 1+2+...+1000，一个没丢一个没重
+    CHECK(sum == 500500);             // 1+2+...+1000，一个没丢一个没重
 }
 
 int main() {
