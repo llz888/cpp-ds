@@ -21,3 +21,8 @@ wait_busy
 wait_cv
 queue_test
 build/
+abstract
+override
+virtual1
+virtual2
+virtual3
