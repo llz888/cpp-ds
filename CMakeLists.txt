@@ -27,3 +27,7 @@ add_executable(pool_use       pool/pool_use.cpp)
 
 add_executable(queue_test     queue/queue_test.cpp)
 target_link_libraries(queue_test PRIVATE Threads::Threads)
+add_executable(myvector_test   myvector/myvector_test.cpp)
+add_executable(smartptr_test   smartptr/smartptr_test.cpp)
+add_executable(threadpool_test threadpool/threadpool_test.cpp)
+target_link_libraries(threadpool_test PRIVATE Threads::Threads)

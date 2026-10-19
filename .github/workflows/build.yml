@@ -1,0 +1,25 @@
+name: build-and-test
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 配置
+        run: cmake -B build -DENABLE_SANITIZERS=ON
+
+      - name: 构建
+        run: cmake --build build -j
+
+      - name: 跑测试
+        run: |
+          ./build/myvector_test
+          ./build/smartptr_test
+          ./build/pool_test
+          ./build/queue_test
+          ./build/threadpool_test
